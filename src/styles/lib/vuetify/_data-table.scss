@@ -1,0 +1,7 @@
+.v-data-table__tr {
+  display: table-row;
+}
+.v-data-table__tr:hover {
+  transition: all 0.15s ease-out;
+  background: rgb(var(--v-theme-background)) !important;
+}

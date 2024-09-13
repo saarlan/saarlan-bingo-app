@@ -1,0 +1,51 @@
+:root {
+  --toastify-color-light: #fff;
+  --toastify-color-dark: #22252b;
+  --toastify-color-info: #2196f3;
+  --toastify-color-success: #4caf50;
+  --toastify-color-warning: #ffc107;
+  --toastify-color-error: #f44336;
+  --toastify-color-transparent: rgba(255, 255, 255, 0.7);
+
+  --toastify-icon-color-info: var(--toastify-color-info);
+  --toastify-icon-color-success: var(--toastify-color-success);
+  --toastify-icon-color-warning: var(--toastify-color-warning);
+  --toastify-icon-color-error: var(--toastify-color-error);
+
+  --toastify-toast-width: 400px;
+  --toastify-toast-background: #fff;
+  --toastify-toast-min-height: 64px;
+  --toastify-toast-max-height: 800px;
+  --toastify-font-family: 'Comfortaa';
+  --toastify-z-index: 9999;
+
+  --toastify-text-color-light: #757575;
+  --toastify-text-color-dark: #fff;
+
+  /* //Used only for colored theme */
+  --toastify-text-color-info: #adb2be;
+  --toastify-text-color-success: #adb2be;
+  --toastify-text-color-warning: #adb2be;
+  --toastify-text-color-error: #adb2be;
+
+  --toastify-spinner-color: #616161;
+  --toastify-spinner-color-empty-area: #e0e0e0;
+
+  /* // Used when no type is provided
+  // toast("**hello**") */
+  // --toastify-color-progress-light: linear-gradient(
+  //   to right,
+  //   #79ead0,
+  //   #758fed,
+  //   #f04539,
+  //   #ffe08a
+  // );
+  /* // Used when no type is provided */
+  --toastify-color-progress-dark: #bb86fc;
+  --toastify-color-progress-info: var(--toastify-color-info);
+  --toastify-color-progress-success: var(--toastify-color-success);
+  --toastify-color-progress-warning: var(--toastify-color-warning);
+  --toastify-color-progress-error: var(--toastify-color-error);
+}
+
+@import 'vue3-toastify/dist/index.css';

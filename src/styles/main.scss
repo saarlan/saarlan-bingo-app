@@ -1,0 +1,23 @@
+@import './lib/toastify/index';
+@import './lib/vuetify/index';
+@import './lib/vue-json-editor/index';
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+::selection {
+  background-color: #e5c07b;
+  color: #22252b;
+}
+
+* {
+  user-select: none;
+}
+.select-text {
+  user-select: text !important;
+}
+
+.monospace {
+  font-family: monospace !important;
+}

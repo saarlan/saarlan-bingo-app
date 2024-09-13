@@ -1,0 +1,52 @@
+stages:
+  - sonarqube-check
+  # - build
+  - deploy
+
+sonarqube-check:
+  stage: sonarqube-check
+  only:
+    - main
+    - dev
+  image:
+    name: sonarsource/sonar-scanner-cli:latest
+    entrypoint: ['']
+  variables:
+    SONAR_USER_HOME: '${CI_PROJECT_DIR}/.sonar' # Defines the location of the analysis task cache
+    GIT_DEPTH: '0' # Tells git to fetch all the branches of the project, required by the analysis task
+  cache:
+    key: '${CI_JOB_NAME}'
+    paths:
+      - .sonar/cache
+  script:
+    - sonar-scanner
+  allow_failure: true
+
+# build:
+#   stage: build
+#   only:
+#     - main
+#     - dev
+#   needs: []
+#   image: tobiaswaelde/jenkins-agent:node-lts
+#   script:
+#     - yarn install
+#     - yarn build
+
+deploy:
+  stage: deploy
+  only:
+    - deploy
+  needs: []
+  image: tobiaswaelde/jenkins-agent:node-lts
+  services:
+    - name: docker:dind
+      alias: docker
+      entrypoint: ['dockerd-entrypoint.sh', '--tls=false']
+  variables:
+    DOCKER_DRIVER: overlay2
+    DOCKER_HOST: tcp://docker:2375/
+    DOCKER_TLS_CERTDIR: ''
+  script:
+    - chmod +x ./scripts/push-to-docker.sh
+    - ./scripts/push-to-docker.sh
