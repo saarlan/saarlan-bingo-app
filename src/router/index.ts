@@ -4,9 +4,25 @@ import { Routes } from './routes';
 const routes: RouteRecordRaw[] = [
   {
     path: '/',
-    name: Routes.Index,
     component: () => import('~/layouts/default.vue'),
-    children: [],
+    children: [
+      {
+        path: '',
+        name: Routes.Index,
+        component: () => import('~/views/index.vue'),
+      },
+    ],
+  },
+  {
+    path: '/',
+    component: () => import('~/layouts/default.vue'),
+    children: [
+      {
+        path: '',
+        name: Routes.Print,
+        component: () => import('~/views/print/index.vue'),
+      },
+    ],
   },
 ];
 
