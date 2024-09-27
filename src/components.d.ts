@@ -7,7 +7,12 @@ export {}
 /* prettier-ignore */
 declare module 'vue' {
   export interface GlobalComponents {
+    MountedTeleport: typeof import('./components/layout/mounted-teleport.vue')['default']
+    Navbar: typeof import('./components/layout/navbar/index.vue')['default']
+    ResizablePage: typeof import('./components/layout/resizable-page.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
+    Sidebar: typeof import('./components/layout/sidebar/index.vue')['default']
+    SidebarVersionInfo: typeof import('./components/layout/sidebar/version-info.vue')['default']
   }
 }

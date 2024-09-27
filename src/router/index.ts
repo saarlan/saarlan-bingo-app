@@ -6,7 +6,21 @@ const routes: RouteRecordRaw[] = [
     path: '/',
     name: Routes.Index,
     component: () => import('~/layouts/default.vue'),
-    children: [],
+    redirect: { name: Routes.Events },
+    children: [
+      {
+        path: 'events',
+        name: Routes.Events,
+        component: () => import('~/views/events/index.vue'),
+        meta: { title: 'Events' },
+      },
+      {
+        path: 'items',
+        name: Routes.Items,
+        component: () => import('~/views/items/index.vue'),
+        meta: { title: 'Items' },
+      },
+    ],
   },
 ];
 

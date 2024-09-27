@@ -10,8 +10,7 @@ export const useLayoutStore = defineStore('layout', () => {
   };
 
   watch([() => title.value], () => {
-    document.title =
-      title.value === 'Smarthome Rule Management' ? title.value : `${title.value} • Smarthome Rule Management`;
+    document.title = title.value === 'SaarLAN Bingo' ? title.value : `${title.value} • SaarLAN Bingo`;
   });
 
   return { title, drawerOpen, toggleDrawer };

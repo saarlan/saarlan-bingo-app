@@ -1,6 +1,7 @@
 // Styles
-import '@mdi/font/css/materialdesignicons.css';
-import 'vuetify/styles';
+// import '@mdi/font/css/materialdesignicons.css';
+// import 'vuetify/styles';
+import '~/styles/lib/vuetify/main.scss';
 
 // Composables
 import { createVuetify } from 'vuetify';
@@ -16,6 +17,7 @@ export default createVuetify({
     VNumberInput,
     VTimePicker,
   },
+
   theme: {
     defaultTheme: 'dark',
     themes: {
@@ -25,12 +27,12 @@ export default createVuetify({
           background: COLORS.background,
           surface: COLORS.backgroundDarken1,
           'surface-light': COLORS.background,
-          primary: COLORS.blue,
+          primary: '#bcc956',
           secondary: COLORS.purple,
-          error: COLORS.red,
+          error: '#c15b56',
           warning: COLORS.yellow,
           success: COLORS.green,
-          info: COLORS.blue,
+          info: '#6196d1',
           'on-background': COLORS.text,
           'on-surface': COLORS.textLight,
         },
@@ -41,12 +43,12 @@ export default createVuetify({
           background: COLORS.backgroundDarken1,
           surface: COLORS.background,
           'surface-light': COLORS.backgroundDarken1,
-          primary: COLORS.blue,
+          primary: '#bcc956',
           secondary: COLORS.purple,
-          error: COLORS.red,
+          error: '#c15b56',
           warning: COLORS.yellow,
           success: COLORS.green,
-          info: COLORS.blue,
+          info: '#6196d1',
           'on-background': COLORS.text,
           'on-surface': COLORS.textLight,
         },

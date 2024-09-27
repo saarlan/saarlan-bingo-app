@@ -62,13 +62,13 @@ const fontsOptions: FontsOptions = {
 const pwaOptions: Partial<VitePWAOptions> = {
   registerType: 'autoUpdate',
   manifest: {
-    name: 'Smarthome Rules',
-    short_name: 'Smarthome Rules',
-    description: 'Smarthome Rule Management',
+    name: 'SaarLAN Bingo',
+    short_name: 'SaarLAN Bingo',
+    description: 'SaarLAN Bingo',
     start_url: '.',
     display: 'standalone',
-    background_color: '#4651b1',
-    theme_color: '#4651b1',
+    background_color: '#bcc956',
+    theme_color: '#bcc956',
     icons: [
       {
         src: 'icon/android-icon-36x36.png',
