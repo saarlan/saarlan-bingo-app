@@ -7,6 +7,7 @@ export {}
 /* prettier-ignore */
 declare module 'vue' {
   export interface GlobalComponents {
+    ItemsTable: typeof import('./components/modules/items/table/index.vue')['default']
     MountedTeleport: typeof import('./components/layout/mounted-teleport.vue')['default']
     Navbar: typeof import('./components/layout/navbar/index.vue')['default']
     ResizablePage: typeof import('./components/layout/resizable-page.vue')['default']
