@@ -42,6 +42,7 @@
     "qs": "^6.12.1",
     "run-in-sequence": "^1.0.5",
     "vue": "^3.4.21",
+    "vue-html2pdf": "^1.8.0",
     "vue-router": "^4.4.0",
     "vue3-toastify": "^0.2.1",
     "vue3-ts-jsoneditor": "^2.11.2",

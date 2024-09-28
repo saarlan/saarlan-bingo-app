@@ -4,6 +4,7 @@
       <v-list-subheader>Administration</v-list-subheader>
       <v-list-item density="compact" :to="{ name: Routes.Events }" :prepend-icon="IconCalendar"> Events </v-list-item>
       <v-list-item density="compact" :to="{ name: Routes.Items }" :prepend-icon="IconPhotoScan"> Items </v-list-item>
+      <v-list-item density="compact" :to="{ name: Routes.Print }" :prepend-icon="IconPrinter"> Print </v-list-item>
     </v-list>
 
     <template #append>
@@ -13,7 +14,7 @@
 </template>
 
 <script setup lang="ts">
-import { IconCalendar, IconPhotoScan } from '@tabler/icons-vue';
+import { IconCalendar, IconPhotoScan, IconPrinter } from '@tabler/icons-vue';
 import { Routes } from '~/router/routes';
 import { useDisplay } from 'vuetify';
 

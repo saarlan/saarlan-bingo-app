@@ -3,4 +3,5 @@ export enum Routes {
 
   Events = 'events',
   Items = 'items',
+  Print = 'print',
 }

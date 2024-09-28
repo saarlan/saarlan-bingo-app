@@ -20,6 +20,12 @@ const routes: RouteRecordRaw[] = [
         component: () => import('~/views/items/index.vue'),
         meta: { title: 'Items' },
       },
+      {
+        path: 'print',
+        name: Routes.Print,
+        component: () => import('~/views/print/index.vue'),
+        meta: { title: 'Print' },
+      },
     ],
   },
 ];
